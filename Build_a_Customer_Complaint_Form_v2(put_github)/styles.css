@@ -1,0 +1,217 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #1e293b;
+  line-height: 1.6;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: #ac6b26;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ========== FORM CONTAINER ========== */
+form {
+  background: #ffffff;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ========== FIELDSETS & LEGENDS ========== */
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+legend {
+  font-weight: 600;
+  color: #ac6b26;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* ========== LABELS & INPUTS ========== */
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ac6b26;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  background-color: #ffffff;
+}
+
+/* ========== CHECKBOXES & RADIOS CUSTOM ======== */
+
+/* Container flex pour chaque option */
+#complaints-group div,
+#solutions-group div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding-left: 2rem;
+}
+
+/* Masquer inputs natifs */
+#complaints-group input[type="checkbox"],
+#solutions-group input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Carré custom pour checkbox */
+#complaints-group label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #ac6b26;
+  border-radius: 4px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+/* Checkbox coché */
+#complaints-group input[type="checkbox"]:checked + label::before {
+  background-color: #ac6b26;
+  border-color: #ac6b26;
+  box-shadow: inset 0 0 0 0.3rem white;
+}
+
+/* Cercle custom pour radio */
+#solutions-group label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #ac6b26;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+/* Radio coché */
+#solutions-group input[type="radio"]:checked + label::before {
+  background: #ac6b26;
+  box-shadow: inset 0 0 0 0.3rem white;
+}
+
+/* ========== TEXTAREAS ========== */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ========== BUTTONS ========== */
+#btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+button {
+  background-color: #ac6b26;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #ac6b26;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ========== MESSAGE BOX ========== */
+#message-box {
+  font-size: 0.95rem;
+  color: #334155;
+  min-height: 1.2em;
+}
+
+/* Bordures rouges pour champs invalides */
+.invalid {
+  border-color: #e11d48 !important;
+  box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.2);
+}
+
+/* Bordures vertes pour champs valides */
+.valid {
+  border-color: #16a34a !important;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
