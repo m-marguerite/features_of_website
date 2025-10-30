@@ -1,0 +1,184 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container principal */
+.container {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Titres */
+h1 {
+  text-align: center;
+  color: #6366f1;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.spacer {
+  height: 20px; /* hauteur de l'espacement */
+  width: 100%; /* prend toute la largeur */
+  border-bottom: 2px solid #667eea; /* ligne fine colorée */
+  margin: 1rem 0; /* marge avant et après */
+  margin-bottom: 2rem;
+  opacity: 0.5; /* légère transparence */
+}
+
+/* Titres des sections */
+.container h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #6366f1;
+  position: relative;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.container h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+.input-area h2:hover::after,
+.output-area h2:hover::after,
+.preview-area h2:hover::after {
+  width: 100%;
+}
+
+/* Sections de conversion */
+.converter-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .converter-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Inputs & outputs */
+#markdown-input,
+#html-output,
+#preview {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 1rem;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  resize: vertical;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#markdown-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+#html-output {
+  background-color: #f9fafb;
+  color: #111827;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  height: 200px;
+}
+
+#preview {
+  background-color: #ffffff;
+  padding: 1rem;
+  line-height: 1.6;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  min-height: 200px;
+}
+
+/* Styles pour le rendu HTML */
+#preview h1 {
+  font-size: 2rem;
+  color: #111827;
+  margin: 0.5rem 0;
+}
+
+#preview h2 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin: 0.4rem 0;
+  position: static;
+}
+
+#preview h2::after {
+  content: none; /* plus d’animation */
+}
+
+#preview h3 {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin: 0.3rem 0;
+}
+
+#preview strong {
+  font-weight: 700;
+  color: #111827;
+}
+
+#preview em {
+  font-style: italic;
+  color: #374151;
+}
+
+#preview blockquote {
+  border-left: 4px solid #6366f1;
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  color: #4b5563;
+}
+
+#preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+#preview a {
+  color: #6366f1;
+  text-decoration: none;
+  border-bottom: 1px dashed #6366f1;
+  transition: all 0.3s ease;
+}
+
+#preview a:hover {
+  color: #4f46e5;
+  border-bottom-color: #4f46e5;
+}
