@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+main {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center; /* centre le titre */
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+#regex-container,
+#test-container,
+#result-container {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+label[for="pattern"] {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem; /* un peu d'espace avec l'input */
+  color: #4f7cff;
+}
+
+#pattern-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+#pattern-container input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#flags-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+#flags-container input {
+  margin-right: 0.25rem;
+}
+
+#test-string {
+  min-height: 60px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.4;
+  outline: none;
+}
+
+#test-string:focus {
+  border-color: #4f7cff;
+  box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.2);
+}
+
+#test-container p {
+  margin-bottom: 0.5rem; /* espace sous le titre */
+  font-weight: 600;
+  color: #4f7cff;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #4f7cff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #3a63d1;
+}
+
+#result-container h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#result {
+  padding: 0.5rem;
+  min-height: 40px;
+  border-radius: 6px;
+  background-color: #f0f4ff;
+  border: 1px solid #d0d7ff;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Highlighted matches */
+.highlight {
+  background-color: #ffeaa7;
+  border-radius: 4px;
+  padding: 0 2px;
+}
