@@ -1,0 +1,136 @@
+/* ---------- Global ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  color: #222;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #ff6b81;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ff4757;
+  transform: translateY(-2px);
+}
+
+#cart-btn {
+  margin: 1rem;
+}
+
+/* ---------- Cart Container ---------- */
+#cart-container {
+  display: none;
+  max-width: 500px;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#products-container .product {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+#products-container .product-count {
+  font-weight: 700;
+  color: #ff6b81;
+  margin-right: 0.3rem;
+}
+
+/* ---------- Totals ---------- */
+#cart-container p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* ---------- Dessert Cards ---------- */
+#dessert-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dessert-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.dessert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dessert-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dessert-price {
+  color: #ff6b81;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-category {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  #dessert-card-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  #cart-container {
+    width: 90%;
+    padding: 1rem;
+  }
+}
