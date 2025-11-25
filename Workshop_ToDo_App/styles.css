@@ -1,0 +1,179 @@
+/* styles.css */
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f7fa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.large-btn {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
+
+/* Todo App Container */
+.todo-app {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Form */
+.task-form {
+  margin-top: 20px;
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.task-form.hidden {
+  display: none;
+}
+
+.task-form-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-task-form-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.task-form-body {
+  margin-top: 15px;
+}
+
+.task-form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Task Form Footer */
+.task-form-footer {
+  text-align: right;
+}
+
+/* Tasks Container */
+#tasks-container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual Task Card */
+.task {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.task p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.task button {
+  margin-right: 10px;
+}
+
+/* Dialog */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-close-dialog-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.discard-message-text {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
