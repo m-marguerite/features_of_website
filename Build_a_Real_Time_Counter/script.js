@@ -1,41 +1,32 @@
-// DOM elements
-const textArea = document.getElementById("text-input");
+const textarea = document.getElementById("text-input");
 const charCount = document.getElementById("char-count");
-const maxLength = 50;
+const maxChars = 50;
 
-// Initialize counter display
-function updateCharCount() {
-  let currentText = textArea.value;
+// Fonction pour mettre à jour le compteur
+const updateTextarea = () => {
+  let currentLength = textarea.value.length;
 
-  // Trim text if it exceeds maxLength
-  if (currentText.length >= maxLength) {
-    currentText = currentText.slice(0, maxLength);
-    textArea.value = currentText;
+  // Si dépassement, on trim la valeur
+  if (currentLength > maxChars) {
+    textarea.value = textarea.value.substring(0, maxChars);
+    alert(`You cannot exceed ${maxChars} characters.`);
+    currentLength = maxChars;
   }
 
-  const currentCount = currentText.length;
+  // Mise à jour du texte du compteur
+  charCount.textContent = `Character Count: ${currentLength}/${maxChars}`;
 
-  // Update display text
-  charCount.textContent = `Character Count: ${currentCount}/${maxLength}`;
 
-  // Apply red styling when limit is reached
-  if (currentCount >= maxLength) {
+  // Changement de couleur 
+  if (currentLength === maxChars) {
     charCount.style.color = "red";
-    charCount.classList.add("limit-reached");
   } else {
-    charCount.style.color = "";
-    charCount.classList.remove("limit-reached");
+    charCount.style.color = "black";
   }
 }
 
-// Event listener for real-time updates
-textArea.addEventListener("input", updateCharCount);
+// Ecouteur d'événement pour mettre à jour en temps réel
+textarea.addEventListener("input", updateTextarea);
 
-// Also listen for paste events to handle pasted text
-textArea.addEventListener("paste", function () {
-  // Use setTimeout to allow paste to complete before updating
-  setTimeout(updateCharCount, 0);
-});
-
-// Initialize display on page load
-updateCharCount();
+// Initialisation du compteur
+updateTextarea();
