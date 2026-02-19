@@ -1,70 +1,51 @@
 # 📝 Lightbox Viewer
 
-Ce projet permet de créer une galerie d’images interactive avec une **lightbox**, permettant d’ouvrir une image en grand format au clic et de la fermer facilement.
+Galerie d’images interactive avec affichage en plein écran (Lightbox) développée en HTML, CSS et JavaScript.
+
 
 ## 🚀 Fonctionnalités
 
-- Galerie d’images cliquables.
-- Affichage en plein écran via lightbox.
-- Fermeture de la lightbox avec le bouton ou en cliquant sur le fond.
-- Animation légère au survol des images.
+- Affichage d’une galerie d’images miniatures
+- Ouverture d’une image en plein écran au clic
+- Chargement automatique de la version haute résolution
+- Fermeture via bouton ou clic sur l’arrière-plan
+
 
 ## ⚙️ Prérequis
 
 - Navigateur web moderne (Chrome, Firefox, Edge…)
-- Connaissances de base en HTML, CSS et JavaScript
+- Aucune dépendance externe
 
-## 📂 Structure du projet
+
+##  📂 Structure du projet
+
 lightbox-viewer/  
-│── index.html      # Contient la galerie et la lightbox  
-│── styles.css      # Style de la galerie, lightbox et animations  
-│── script.js       # Gestion de l’ouverture et fermeture de la lightbox  
+│── index.html      # Structure HTML de la galerie et de la lightbox  
+│── styles.css      # Mise en page, animations et responsive design  
+│── script.js       # Gestion des événements et manipulation du DOM  
 │── README.md       # Documentation  
 
-## 🛠️ Technologies utilisées
 
-HTML5 – Structure de la galerie et lightbox  
-CSS3 – Mise en forme, layout et animations au survol  
-JavaScript – Interactions pour ouvrir et fermer la lightbox  
+##  🛠️ Technologies utilisées
 
-## 🎯 Objectif pédagogique
+HTML5 – Structure sémantique de la page  
+CSS3 – Flexbox, transitions, responsive design  
+JavaScript – Manipulation du DOM et gestion des événements  
 
-Ce projet permet de pratiquer :
-- la manipulation du DOM pour afficher dynamiquement des images,
-- la gestion d’événements (clic sur image, bouton ou arrière-plan),
-- le contrôle de styles CSS via JavaScript pour créer une expérience utilisateur interactive.
 
-# 📝 Note Taking App
+##  🎯 Objectif pédagogique
 
-A simple, interactive note-taking app built with HTML, CSS, and JavaScript.
+Ce projet illustre :
 
-## 🚀 Fonctionnalités
+- La manipulation du DOM avec `querySelector` et `querySelectorAll`
+- L’ajout d’événements avec `addEventListener`
+- La gestion dynamique d’attributs (`src`)
+- L’utilisation de Flexbox pour centrer un élément en plein écran
+- La gestion d’un overlay interactif
 
-- Zone de texte éditable en temps réel pour écrire ou modifier des notes.  
-- Message de confirmation lorsque la note est sauvegardée.  
-- Interface simple et agréable avec effets visuels au survol.  
-- Accessible grâce aux attributs ARIA et aux bonnes pratiques HTML.
+Il permet de comprendre comment implémenter un système de lightbox sans bibliothèque externe.
 
-## ⚙️ Prérequis
 
-- Navigateur web moderne compatible HTML5, CSS3 et JavaScript.  
-
-## 📂 Structure du projet
-Note-Taking-App/  
-│── index.html      # Structure principale avec zone éditable et message de statut  
-│── styles.css      # Style et mise en page de la note et de l’interface  
-│── script.js       # Gestion de l’interactivité et de la sauvegarde  
-
-## 🛠️ Technologies utilisées
-
-HTML5 – Structure de la page et contenu éditable  
-CSS3 – Mise en forme, design et effets visuels  
-JavaScript – Gestion des événements focus/blur et affichage du statut  
-
-## 🎯 Objectif pédagogique
-
-Ce projet permet de pratiquer la manipulation d’éléments DOM éditables, la gestion d’événements utilisateur et la mise en forme d’interface simple et accessible.
-
-## 📧 Contact
+##  📧 Contact
 
 Auteur : m-marguerite
