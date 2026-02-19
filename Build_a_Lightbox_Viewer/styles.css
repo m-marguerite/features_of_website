@@ -1,28 +1,53 @@
-body {
-  font-family: "Poppins", sans-serif;
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-/* galerie */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Titre */
+h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Galerie */
 .gallery {
   display: flex;
-  gap: 10px;
-  margin-top: 50px;
+  justify-content: center; /* centre horizontalement */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .gallery-item {
-  width: 150px;
-  cursor: pointer;
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .gallery-item:hover {
   transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* Lightbox */
@@ -30,31 +55,50 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw; /* corrigé par rapport à ton 100vh */
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
+/* Image dans lightbox */
 #lightbox-image {
-  max-width: 80%;
+  max-width: 90%;
   max-height: 80%;
-  border-radius: 8px;
-  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* Bouton close */
 #close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
   font-size: 2rem;
-  color: white;
   background: none;
   border: none;
+  color: white;
   cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1001;
+  transition: transform 0.2s;
+}
+
+#close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 120px;
+    height: 80px;
+  }
+
+  #close-btn {
+    font-size: 1.5rem;
+    top: 10px;
+    right: 15px;
+  }
 }
