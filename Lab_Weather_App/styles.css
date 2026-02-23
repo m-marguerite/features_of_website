@@ -1,0 +1,113 @@
+/* Reset et base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  color: #333;
+}
+
+/* Titre */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulaire sélection et bouton */
+select,
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #ff7f50;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #ff6347;
+  transform: translateY(-2px);
+}
+
+/* Container météo */
+#weather-container {
+  display: none; /* caché au départ */
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+/* Icône météo */
+#weather-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+/* Location et type météo */
+#location {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff7f50;
+  margin-bottom: 5px;
+}
+
+#weather-main {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Infos météo */
+#weather-container p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  #weather-container {
+    padding: 20px;
+  }
+
+  #weather-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
